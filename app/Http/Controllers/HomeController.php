@@ -25,4 +25,30 @@ class HomeController extends Controller
             'id' => $folder->id,
         ]);
     }
+
+    public function listLink(){
+         // ログインユーザーを取得する
+        $user = Auth::user();
+
+        // ログインユーザーに紐づくフォルダを一つ取得する
+        $folder = $user->folders()->first();
+
+        // フォルダがあればそのフォルダのタスク一覧にリダイレクトする
+        return redirect()->route('tasks.index', [
+            'id' => $folder->id,
+        ]);
+    }
+
+    public function listTable(){
+        // ログインユーザーを取得する
+        $user = Auth::user();
+
+        // ログインユーザーに紐づくフォルダを一つ取得する
+        $folder = $user->folders()->first();
+
+        // フォルダがあればそのフォルダのタスク一覧にリダイレクトする
+        return redirect()->route('folders.index', [
+            'id' => $folder->id,
+        ]);
+    }
 }

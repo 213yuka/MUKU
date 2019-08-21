@@ -20,120 +20,39 @@
             </a>
             </div>
             <div id='calendar'></div>
+        </div>
+      </div>
+    </div>
+ </div>
+@endsection
 
-<!--
-<table class="table table-bordered">
-  <thead>
-  <tr>
-        <th>日</th>
-        <th>月</th>
-        <th>火</th>
-        <th>水</th>
-        <th>木</th>
-        <th>金</th>
-        <th>土</th>
-    </tr>
-  </thead>
-
-    <tr>
-<td>
-
-      </td>
-
-    </tr>
-
-  </tbody>
-</table> -->
-</div>
-</div>
-</div>
-</div>
-
+@section('scripts')
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
       plugins: [ 'interaction', 'dayGrid' ],
-    //   defaultDate: '2019-07-12',
       editable: true,
-      eventLimit: true, // allow "more" link when too many events
+      eventLimit: true,
       events: [
-        {
-          title: '10',
-          start: '2019-08-02',
-          color:'#d65a5a',
-        },
-        {
-          title: '65',
-          start: '2019-08-01',
-          color: '#92d65a',
-        //   rendering: 'background'
-        },
-        {
-          title: '90',
-          start: '2019-07-22',
-          color: '#5a94d6',
-        //   rendering: 'background'
-        },
-        // {
-        //   groupId: 999,
-        //   title: 'Repeating Event',
-        //   start: '2019-06-16T16:00:00',
-        //   color: '#257e4a',
-        // //   rendering: 'background'
-        // },
-        // {
-        //   groupId: 999,
-        //   title: 'Repeating Event',
-        //   start: '2019-06-16T16:00:00'
-        // },
-        // {
-        //   title: 'Conference',
-        //   start: '2019-06-11',
-        //   end: '2019-06-13'
-        // },
-        // {
-        //   title: 'Meeting',
-        //   start: '2019-06-12T10:30:00',
-        //   end: '2019-06-12T12:30:00'
-        // },
-        // {
-        //   title: 'Lunch',
-        //   start: '2019-06-12T12:00:00'
-        // },
-        // {
-        //   title: 'Meeting',
-        //   start: '2019-06-12T14:30:00'
-        // },
-        // {
-        //   title: 'Happy Hour',
-        //   start: '2019-06-12T17:30:00'
-        // },
-        // {
-        //   title: 'Dinner',
-        //   start: '2019-06-12T20:00:00'
-        // },
-        // {
-        //   title: 'Birthday Party',
-        //   start: '2019-06-13T07:00:00'
-        // },
-        // {
-        //   title: 'Click for Google',
-        //   url: 'http://google.com/',
-        //   start: '2019-06-28'
-        // }
+          @foreach($calendars as $calendar)
+          {
+              title: '@php echo $calendar->evaluation @endphp',
+              start: '@php echo $calendar->date @endphp',
+              color: @if($calendar->evaluation >= 0 && $calendar->evaluation<20)'#d65a5a'
+                     @elseif($calendar->evaluation >= 20 && $calendar->evaluation<40)'#d6c35a'
+                     @elseif($calendar->evaluation >= 40 && $calendar->evaluation<60)'#92d65a'
+                     @elseif($calendar->evaluation >= 60 && $calendar->evaluation<80)'#5ad6c1'
+                     @elseif($calendar->evaluation >= 80 && $calendar->evaluation<=100)'#5a94d6'
+                     @endif
+              ,
+          },
+        @endforeach
       ]
     });
 
     calendar.render();
   });
 </script>
-<style>
-
-#calendar {
-    /* color:red; */
-}
-
-</style>
 @endsection

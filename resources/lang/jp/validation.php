@@ -57,7 +57,7 @@ return [
     'image'                => 'The :attribute must be an image.',
     'in'                   => 'The selected :attribute is invalid.',
     'in_array'             => 'The :attribute field does not exist in :other.',
-    'integer'              => 'The :attribute must be an integer.',
+    'integer'              => ':attribute は整数を入力してください。.',
     'ip'                   => 'The :attribute must be a valid IP address.',
     'ipv4'                 => 'The :attribute must be a valid IPv4 address.',
     'ipv6'                 => 'The :attribute must be a valid IPv6 address.',
@@ -75,7 +75,7 @@ return [
         'array'   => 'The :attribute must not have more than :value items.',
     ],
     'max'                  => [
-        'numeric' => 'The :attribute may not be greater than :max.',
+        'numeric' => ':attribute は :max. 点以下で入力してください。',
         'file'    => 'The :attribute may not be greater than :max kilobytes.',
         'string'  => ':attribute は :max 文字以内で入力してください。',
         'array'   => 'The :attribute may not have more than :max items.',

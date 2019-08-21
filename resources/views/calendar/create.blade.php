@@ -18,16 +18,16 @@
                 @endforeach
               </div>
             @endif
-            <form action="{{ route('calendar.create') }}" method="POST">
+            <form action="{{ route('calendar.create') }}" method="post">
               @csrf
               <div class="form-group">
-                <label for="due_date">日にち</label>
-                <input type="text" class="form-control" name="due_date" id="due_date" value="{{ old('due_date') }}" />
+                <label for="date">日にち</label>
+                <input type="text" class="form-control" name="date" id="date" value="{{ old('date') }}" />
               </div>
               <div class="form-group">
-                <label for="title">評価</label>
-                <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" />
-
+                <label for="evaluation">点数</label>
+                <input type="text" class="form-control" name="evaluation" id="evaluation" value="{{ old('evaluation') }}" />
+              </div>
               <div class="text-right">
                 <button type="submit" class="btn btn-primary">送信</button>
               </div>
@@ -41,5 +41,5 @@
 @endsection
 
 @section('scripts')
-  @include('share.flatpickr.scripts')
+  @include('share.flatpickr.scripts2')
 @endsection

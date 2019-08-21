@@ -35,6 +35,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Folder');
     }
 
+    public function calendars()
+    {
+        return $this->hasMany('App\Evaluation');
+    }
+
     public function sendPasswordResetNotification($token)
     {
         Mail::to($this)->send(new ResetPassword($token));

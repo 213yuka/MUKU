@@ -29,7 +29,7 @@
                        value="{{ old('title', $task->title) }}" />
               </div>
               <div class="form-group">
-                <label for="status">状態</label>
+                <label for="status">優先順位</label>
                 <select name="status" id="status" class="form-control">
                   @foreach(\App\Task::STATUS as $key => $val)
                     <option

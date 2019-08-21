@@ -24,17 +24,24 @@
               項目を追加する
             </a>
           </div>
+            <div class="panel-body">
+                <div class="text-right">
+                <a href="{{ route('list.table') }}" class="btn btn-default">
+                    編集・消去する
+                </a>
+                </div>
+            </div>
         </nav>
       </div>
       <div class="column col-md-8">
         <div class="panel panel">
           <div class="panel-heading">TO DO LIST</div>
           <div class="panel-body">
-          <a href = "{{ route('tasks.index.status', ['id' => $folder->id]) }}">
+          <a href = "{{ route('tasks.index.status', ['id' => $current_folder_id]) }}">
                   優先順位順
              </a>
                   　| 　
-          <a href = "{{ route('tasks.index.due', ['id' => $folder->id]) }}">
+          <a href = "{{ route('tasks.index.due', ['id' => $current_folder_id]) }}">
                   期限順
               </a>
           </div>
@@ -55,9 +62,15 @@
                   <span class="label {{ $task->status_class }}">{{ $task->status_label }}</span>
                 </td>
                 <td>{{ $task->formatted_due_date }}</td>
-                <td>
-                <a href="{{ route('tasks.edit', ['id' => $task->folder_id, 'task_id' => $task->id]) }}">
-                編集</a></td>
+                <td><a href="{{ route('tasks.edit', ['id' => $task->folder_id, 'task_id' => $task->id]) }}" class="btn btn-default">
+                編集</a>
+                 <form
+                     action="{{ route('tasks.delete', ['id' => $task->folder_id, 'task_id' => $task->id]) }}"
+                     method="POST"
+                    >
+                    {{ csrf_field() }}
+                 <button type= type="submit" value="削除" class="btn btn-default">
+                   消去</button></form></td>
               </tr>
             @endforeach
             </tbody>

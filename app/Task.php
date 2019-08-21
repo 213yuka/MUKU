@@ -24,7 +24,7 @@ class Task extends Model
      */
     public function getStatusLabelAttribute()
     {
-        // 状態値
+        // 優先順位値
         $status = $this->attributes['status'];
 
         // 定義されていなければ空文字を返す
@@ -41,7 +41,7 @@ class Task extends Model
      */
     public function getStatusClassAttribute()
     {
-        // 状態値
+        // 優先順位カラムの値を取得
         $status = $this->attributes['status'];
 
         // 定義されていなければ空文字を返す

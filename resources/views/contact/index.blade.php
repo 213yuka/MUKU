@@ -2,6 +2,7 @@
 
 @section('content')
 <br>
-<h2>Form</h2>
+<h2>Contact</h2>
+    <p>--近日公開--</p>
 
 @endsection

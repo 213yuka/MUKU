@@ -15,7 +15,7 @@
         @endif
   		<ul>
         <li><a href="{{ route('calendar.index') }}"><div>Calender</div></a></li>
-        <li><a href="#"><div>List</div></a></li>
+        <li><a href="{{ route('list') }}"><div>List</div></a></li>
         <li><a href="{{ route('analyze.index') }}"><div>Analyze</div></a></li>
         <li><a href="{{ route('ChaCha.index') }}"><div>ChaCha</div></a></li>
         <li><a href="{{ route('contact.index') }}"><span style="color:#5d5c96;">

@@ -12,17 +12,13 @@ use Illuminate\Support\Facades\DB;
 
 class TaskController extends Controller
 {
-    /**
-     * タスク一覧
-     * @param Folder $folder
-     * @return \Illuminate\View\View
-     */
+    // [get]タスク一覧
     public function index(Folder $folder)
     {
-        // ユーザーのフォルダを取得する
+        // ユーザーの項目を取得する
         $folders = Auth::user()->folders()->get();
 
-        // 選ばれたフォルダに紐づくタスクを取得する
+        // 選ばれた項目に紐づくタスクを取得する
         $tasks = $folder->tasks()->get();
 
         return view('tasks/index', [
@@ -32,17 +28,13 @@ class TaskController extends Controller
         ]);
     }
 
-    /**
-     * タスク一覧優先順位順ソート
-     * @param Folder $folder
-     * @return \Illuminate\View\View
-     */
+    // [get]タスク一覧優先順位順ソート
     public function indexSortStatus(Folder $folder)
     {
-        // ユーザーのフォルダを取得する
+        // ユーザーの項目を取得する
         $folders = Auth::user()->folders()->get();
 
-        // 選ばれたフォルダに紐づくタスクを取得する
+        // 選ばれた項目に紐づくタスクを優先順位順で取得する
         $tasks = $folder->tasks()->orderBy('status', 'asc')->get();
 
         return view('tasks/index', [
@@ -52,17 +44,13 @@ class TaskController extends Controller
         ]);
     }
 
-    /**
-     * タスク一覧優先順位順ソート
-     * @param Folder $folder
-     * @return \Illuminate\View\View
-     */
+    // [get]タスク一覧順ソート
     public function indexSortDue(Folder $folder)
     {
-        // ユーザーのフォルダを取得する
+        // ユーザーの項目を取得する
         $folders = Auth::user()->folders()->get();
 
-        // 選ばれたフォルダに紐づくタスクを取得する
+        // 選ばれた項目に紐づくタスクを期限順に取得する
         $tasks = $folder->tasks()->orderBy('due_date', 'asc')->get();
 
         return view('tasks/index', [
@@ -72,29 +60,21 @@ class TaskController extends Controller
         ]);
     }
 
-    /**
-     * タスク作成フォーム
-     * @param Folder $folder
-     * @return \Illuminate\View\View
-     */
-    public function showCreateForm(Folder $folder)
+    // [get]タスク作成フォーム表示
+    public function showCreateForm(Folder $folder, Task $task)
     {
         return view('tasks/create', [
+            'task' => $task,
             'folder_id' => $folder->id,
         ]);
     }
 
-    /**
-     * タスク作成
-     * @param Folder $folder
-     * @param CreateTask $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
+    // [post]タスク作成フォームからタスク一覧表示へリダイレクト
     public function create(Folder $folder, CreateTask $request)
     {
         $task = new Task();
         $task->title = $request->title;
-        // $task->status = $request->status;
+        $task->status = $request->status;
         $task->due_date = $request->due_date;
 
         $folder->tasks()->save($task);
@@ -104,14 +84,10 @@ class TaskController extends Controller
         ]);
     }
 
-    /**
-     * タスク編集フォーム
-     * @param Folder $folder
-     * @param Task $task
-     * @return \Illuminate\View\View
-     */
+    // [get]タスク編集フォーム
     public function showEditForm(Folder $folder, Task $task)
     {
+//        \Debugbar::addMessage($folder->id);
         $this->checkRelation($folder, $task);
 
         return view('tasks/edit', [
@@ -119,19 +95,13 @@ class TaskController extends Controller
         ]);
     }
 
-    /**
-     * タスク編集
-     * @param Folder $folder
-     * @param Task $task
-     * @param EditTask $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
+    // [post]タスク編集フォームからタスク一覧表示へリダイレクト
     public function edit(Folder $folder, Task $task, EditTask $request)
     {
         $this->checkRelation($folder, $task);
 
         $task->title = $request->title;
-        // $task->status = $request->status;
+        $task->status = $request->status;
         $task->due_date = $request->due_date;
         $task->save();
 
@@ -140,14 +110,33 @@ class TaskController extends Controller
         ]);
     }
 
-    /**
-     * フォルダとタスクの関連性があるか調べる
-     * @param Folder $folder
-     * @param Task $task
-     */
+    // [get]タスク編集フォーム
+    public function showDeleteForm(Folder $folder, Task $task)
+    {
+//        \Debugbar::addMessage($folder->id);
+        $this->checkRelation($folder, $task);
+
+        return view('tasks/delete', [
+            'task' => $task,
+        ]);
+    }
+
+    // [post]タスクを消去し、タスク一覧表示へリダイレクト
+    public function delete(Folder $folder, Task $task)
+    {
+        $this->checkRelation($folder, $task);
+        $task->delete();
+
+        return redirect()->route('tasks.index', [
+            'id' => $task->folder_id,
+        ]);
+    }
+
+    // リレーションが存在しないとき404を返す処理
     private function checkRelation(Folder $folder, Task $task)
     {
         if ($folder->id !== $task->folder_id) {
+    //abort関数で404レスポンスコードを設定
             abort(404);
         }
     }

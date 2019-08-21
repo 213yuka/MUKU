@@ -27,6 +27,7 @@ class CreateFolder extends FormRequest
             'title' => 'required|max:20',
         ];
     }
+    //https://readouble.com/laravel/5.7/ja/validation.html#available-validation-rules
 
     public function attributes()
     {
