@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MUKU</title>
   @yield('styles')
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/need.css">
   <link rel="icon" type="image/png" href="/images/m.png">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -22,6 +22,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
+<div class = "wrapper">
   	<header class = "header">
       @yield('header')
 @if(!Auth::check())
@@ -40,16 +41,16 @@
 	<div>
 		<h3>ABOUT</h3>
 		<ul>
-      <li><a href="https://www.aoyama.ac.jp/outline/history/">設立のきっかけ</a></li>
-      <li><a href="http://www.cc.aoyama.ac.jp/~sumi_labo/people.php">開発者</a></li>
+      <li><a href={{ route('contact.motivation') }}>設立のきっかけ</a></li>
+      <li><a href={{ route('contact.developer') }}>開発者</a></li>
     </ul>
   </div>
 
   <div>
   <h3>SUPPORT</h3>
   <ul>
-    <li><a href="https://www.aoyama.ac.jp/faq/">よくある質問</a></li>
-    <li><a href="contact.html">お問い合わせ</a></li>
+    <li><a href={{ route('contact.question') }}>よくある質問</a></li>
+    <li><a href={{ route('contact.contact') }}>お問い合わせ</a></li>
   </ul>
   </div>
 
@@ -66,5 +67,6 @@
   </script>
 @endif
 @yield('scripts')
+</div>
 </body>
 </html>

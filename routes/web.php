@@ -44,13 +44,13 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/ChaCha', 'ChaChaController@index')->name('ChaCha.index');
 
     // Contact
-    Route::get('/contact', 'ContactController@index')->name('contact.index');
+    Route::get('/contact/index', 'ContactController@index')->name('contact.index');
+    Route::get('/contact/about/motivation', 'ContactController@showMotivation')->name('contact.motivation');
 
     //Other information
-    Route::get('/about/motivation', 'OtherController@showMotivation')->name('other.motivation');
-    Route::get('/about/developer', 'OtherController@showDeveloper')->name('other.developer');
-    Route::get('/support/question', 'OtherController@showQuestion')->name('other.question');
-    Route::get('/support/contact', 'OtherController@showContact')->name('other.contact');
+    Route::get('/contact/about/developer', 'ContactController@showDeveloper')->name('contact.developer');
+    Route::get('/contact/support/question', 'ContactController@showQuestion')->name('contact.question');
+    Route::get('/contact/support/contact', 'ContactController@showContact')->name('contact.contact');
 
 });
 
@@ -64,10 +64,8 @@ Auth::routes();
 //・点数編集機能
 //・点数共有機能
 
-//アナライズつけたい機能
 
-
-// これから追加したい機能
+// これから追加するかもしれない機能
 // List
 // ・全タスクの表示
 //　・一括消去

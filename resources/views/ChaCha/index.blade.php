@@ -2,5 +2,6 @@
 
 @section('content')
 <br>
-<h2>Stress Free</h2>
+<h2>ChaCha</h2>
+<p>--️近日公開--</p>
 @endsection

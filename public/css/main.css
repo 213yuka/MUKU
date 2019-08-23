@@ -1,0 +1,345 @@
+@charset "utf-8";
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootflat/2.0.4/css/bootflat.min.css');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100&display=swap');
+
+
+html{
+    font-family: 'Poiret One', cursive;
+}
+.header p{
+    font-family: 'Poiret One', cursive;
+}
+body{
+    margin: 0 auto 0 auto;
+    padding: 0px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    /*max-width: 1200px;*/
+    /* テスト用 */
+     background-color: #a01313;
+}
+
+h2{
+    color:#23345a96;
+    font-size: 22px;
+    border-bottom: 3px dotted #23345a96;
+    margin: 20px 0px 20px 0px;
+    padding: 5px 5px 5px 5px;
+    font-family: 'Poiret One', cursive;
+}
+p{
+    line-height: 1.6;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+a:link {
+    color: #a01313;
+}
+a:visited {
+    color: #9e589896;
+    color: #999999;
+}
+a:hover {
+    color: #e6cdcd;
+}
+a:active {
+    color: #a01313;
+}
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+}
+
+.keyvisual {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.4),rgba(0,0,0,0.4)
+    ),url("../images/mac.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+}
+
+.keyvisual2 {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.2),rgba(0,0,0,0.2)
+    ),url("../images/mac.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    text-align: center;
+}
+
+
+/* header */
+.navbar-brand{
+    font-family: 'Poiret One', cursive;
+}
+.navbar-text{
+    padding: 0px 20px 0px 0px;
+}
+
+.container-fluid,
+.navbar-brand,
+.navbar{
+    background-color: #d6d7daad;
+}
+
+.right{
+    text-align: right;
+    padding: 0px 20px 0px 0px;
+}
+
+.nav{
+    color: #fff;
+    background-color: #b2c4e06e;
+    font-family: 'Poiret One', cursive;
+}
+.nav li{
+    display:inline;
+    list-style-type: none;
+    padding-right: 60px;
+    font-size: 20px;
+}
+
+.nav ul{
+    margin: 0 0 0 0;
+    padding: 20px 10px 15px 20px;
+    background-repeat: repeat-x;
+}
+.nav a:link{
+    color: #fff;
+    text-decoration: none;
+}
+.nav a:visited{
+    color:#fff;
+    text-decoration: none;
+}
+.nav a:hover{
+    color: #5d5c96;
+    text-decoration: none;
+}
+.nav a:active{
+    color: #e6cdcd;
+    text-decoration: none;
+}
+
+header h1{
+    position: absolute;
+    top: 350px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+    font-size:350%;
+    color:#fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: 3px;
+    font-weight:400;
+}
+
+
+/* Bootstrapデザイン変更 */
+.list-group,
+.table th,
+.table td{
+    text-align: center;
+}
+
+.panel-body{
+    background-color: #e3e3e6;
+}
+
+.panel-heading{
+    background-color: #8996a5;
+    color: #fff;
+}
+
+/* Listデザイン */
+.add{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#active{
+    background-color: #4f8bb38e;
+    color: #fff;
+}
+
+.center{
+    text-align: center;
+    padding: 20px 10px 15px 20px;
+}
+
+/* カレンダー */
+.label1{
+    color: #fff;
+    background-color: #d65a5a;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+}
+.label2{
+    color: #fff;
+    background-color: #d6c35a;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+}
+.label3{
+    color: #fff;
+    background-color: #92d65a;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+}
+.label4{
+    color: #fff;
+    background-color: #5ad6c1;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+}
+.label5{
+    color: #fff;
+    background-color: #5a94d6;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+/*Contact*/
+.contact{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),rgba(0,0,0,0.7)
+    ),url("../images/art.jpg");
+    /*background-position: center center;*/
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    height: 70vh;
+    text-align: center;
+    color: #fff;
+    font-size: 17px;
+    padding: 50px 30px 30px 30px;
+    border-radius: 10px;
+    line-height: 500%;
+}
+
+
+.contactTitle{
+    text-align: center;
+    font-size: 18px;
+    line-height: 500%;
+}
+
+.contactContent{
+    text-align: center;
+    font-size: 16px;
+    line-height: 350%;
+}
+
+/* ログイン */
+.box{
+    padding: 400px 0px 0px 0px;
+}
+
+/* footer */
+.footer{
+  padding:40px 20px;
+  color: #fff;
+	background-color:#6f9cad8e;
+}　　　　　　　　　
+.footA{
+  margin-bottom: 30px;
+}
+
+.footA h2{
+	color: #fff;
+	border-bottom: 3px #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    letter-spacing: 0.2em;
+    font-family: 'Poiret One', cursive;
+}
+
+.footB div{
+  margin-bottom: 20px;
+}
+
+.footB h3{
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: solid 1px currentColor;
+  font-size: 17px;
+  font-family: 'Poiret One', cursive;
+}
+
+.footB ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footB li{
+	font-size: 14px;
+}
+
+
+
+@media (max-width: 767px) {
+	.wrapper {
+		margin: 0 8px;
+	}
+	.nav li {
+		display: block;
+	}
+ .box{
+	width: 100%;
+	}
+	form {
+		width: 100%;
+	}
+	select {
+		width: 100%;
+	}
+	input[name="subject"] {
+		width: 100%;
+	}
+	textarea {
+		width: 100%;
+	}
+	input[type="submit"] {
+		margin: 20px 0;
+		width: 100%;
+	}
+}
+
+#result {
+	border: 1px solid #cccccc;
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 800px;
+}
+th, td {
+	padding: 0.5em;
+	border: 1px solid #cccccc;
+	text-align: left;
+	vertical-align: top;
+}
+th {
+	width: 100px;
+	background-color: #eeeeee;
+}
+
