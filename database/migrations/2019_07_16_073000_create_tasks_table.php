@@ -19,6 +19,7 @@ class CreateTasksTable extends Migration
             $table->string('title', 100);
             $table->date('due_date');
             $table->integer('status')->default(1);
+            $table->integer('folder_id')->unsigned();
             $table->timestamps();
 
             // 外部キーを設定する

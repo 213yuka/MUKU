@@ -16,7 +16,7 @@
         <div class="panel panel">
         <div class="panel-body">
             <a href="{{ route('calendar.create') }}" class="btn btn-default btn-block">
-              点数を入力する
+              1日の点数を入力する
             </a>
             </div>
             <div id='calendar'></div>
@@ -24,6 +24,9 @@
       </div>
     </div>
  </div>
+
+<p>※このページの表示はスマートフォン対応していません。</p>
+
 @endsection
 
 @section('scripts')
@@ -32,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+
       plugins: [ 'interaction', 'dayGrid' ],
       editable: true,
       eventLimit: true,
@@ -40,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
           {
               title: '@php echo $calendar->evaluation @endphp',
               start: '@php echo $calendar->date @endphp',
+              url: '{{ route('calendar.edit',['id' => $calendar->id]) }}',
               color: @if($calendar->evaluation >= 0 && $calendar->evaluation<20)'#d65a5a'
                      @elseif($calendar->evaluation >= 20 && $calendar->evaluation<40)'#d6c35a'
                      @elseif($calendar->evaluation >= 40 && $calendar->evaluation<60)'#92d65a'

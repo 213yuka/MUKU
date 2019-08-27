@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MUKU</title>
   @yield('styles')
-  <link rel="stylesheet" href="/css/need.css">
+  <link rel="stylesheet" href="/css/style.css" media="all">
   <link rel="icon" type="image/png" href="/images/m.png">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
-  <!-- fullcalendar -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href='packages/core/main.css' rel='stylesheet' />
   <link href='packages/daygrid/main.css' rel='stylesheet' />
   <script src='packages/core/main.js'></script>

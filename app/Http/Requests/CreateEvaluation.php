@@ -24,7 +24,7 @@ class CreateEvaluation extends FormRequest
     public function rules()
     {
         return [
-            'date' => 'required|date|before_or_equal:today',
+            'date' => 'required|unique:evaluations,date|date|before_or_equal:today',
             'evaluation' => 'required|integer|max:100',
         ];
     }
@@ -41,6 +41,7 @@ class CreateEvaluation extends FormRequest
     {
         return [
             'date.before_or_equal' => ':attribute には今日以前の日付を入力してください。',
+            'unique'  => ':attribute にはすでに点数が入力されています',
         ];
     }
 }

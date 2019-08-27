@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+    //　[get]LPページ
+    public function welcome()
+    {
+        return view('welcome');
+    }
+
     public function index()
     {
         // ログインユーザーを取得する
@@ -15,7 +21,7 @@ class HomeController extends Controller
         // ログインユーザーに紐づくフォルダを一つ取得する
         $folder = $user->folders()->first();
 
-        // まだ一つもフォルダを作っていなければホームページをレスポンスする
+        // まだ一つもフォルダを作っていなければリスト作成ページをレスポンスする
         if (is_null($folder)) {
             return view('home');
         }
@@ -33,6 +39,11 @@ class HomeController extends Controller
         // ログインユーザーに紐づくフォルダを一つ取得する
         $folder = $user->folders()->first();
 
+        // まだ一つもフォルダを作っていなければリスト作成ページをレスポンスする
+        if (is_null($folder)) {
+            return view('home');
+        }
+
         // フォルダがあればそのフォルダのタスク一覧にリダイレクトする
         return redirect()->route('tasks.index', [
             'id' => $folder->id,
@@ -45,6 +56,11 @@ class HomeController extends Controller
 
         // ログインユーザーに紐づくフォルダを一つ取得する
         $folder = $user->folders()->first();
+
+        // まだ一つもフォルダを作っていなければリスト作成ページをレスポンスする
+        if (is_null($folder)) {
+            return view('home');
+        }
 
         // フォルダがあればそのフォルダのタスク一覧にリダイレクトする
         return redirect()->route('folders.index', [

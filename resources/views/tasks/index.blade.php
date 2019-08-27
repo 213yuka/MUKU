@@ -35,7 +35,7 @@
       </div>
       <div class="column col-md-8">
         <div class="panel panel">
-          <div class="panel-heading">TO DO LIST</div>
+          <div class="panel-heading">TO DO TASK</div>
           <div class="panel-body">
           <a href = "{{ route('tasks.index.status', ['id' => $current_folder_id]) }}">
                   優先順位順

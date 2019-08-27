@@ -15,7 +15,7 @@ body{
     padding: 0px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     /* テスト用 */
-     background-color: #a01313;
+    /* background-color: #a01313;*/
 }
 
 h2{
@@ -421,14 +421,24 @@ header h1{
 }
 
 
-
-@media (max-width: 767px) {
+@media screen and (min-width: 500px) and (max-width: 999px) {
 	.wrapper {
 		margin: 0 8px;
 	}
 	.nav li {
 		display: block;
 	}
+    .listPIC{
+        max-width: 350px;
+        max-height: 250px;
+        padding: 20px;
+        text-align: center;
+    }
+    .calendarPIC{
+        max-width: 300px;
+        max-height: 350px;
+        padding: 20px;
+    }
  .box{
 	width: 100%;
 	}
@@ -448,6 +458,40 @@ header h1{
 		margin: 20px 0;
 		width: 100%;
 	}
+
+}
+
+@media screen and  (max-width: 480px) {
+
+    .require {
+        float: none;
+    }
+    .ContentBox{
+        max-width: 200px;
+    }
+    .ContentP{
+        max-width: 200px;
+    }
+    .listPIC{
+        max-width: 300px;
+        max-height: 200px;
+        padding: 20px;
+        text-align: center;
+    }
+    .calendarPIC{
+        max-width: 250px;
+        max-height: 300px;
+        padding: 20px;
+    }
+    .contact{
+        max-height: 1200px;
+    }
+    .contactContent{
+        font-size: 11px;
+    }
+    .contactTitle{
+        font-size: 16px;
+    }
 }
 
 th, td {
@@ -461,157 +505,53 @@ th {
 	background-color: #eeeeee;
 }
 
+
 .main1 {
     background-color: #f1f1f1;
-    /*background-position: 0px 0px;*/
-    /*bottom: 0px;*/
-    /*box-sizing: border-box;*/
-    /*color: rgb(33, 37, 41);*/
-    /*height: 611px;*/
-    /*left: 0px;*/
-    /*overflow-wrap: break-word;*/
-    /*position: relative;*/
-    /*right: 0px;*/
-    /*text-align: left;*/
-    /*text-decoration: none solid rgb(33, 37, 41);*/
-    /*text-rendering: optimizelegibility;*/
-    /*text-size-adjust: 100%;*/
-    /*top: 0px;*/
-    /*width: 1440px;*/
-    /*word-break: break-all;*/
-    /*column-rule-color: rgb(33, 37, 41);*/
-    /*perspective-origin: 720px 305.5px;*/
-    /*transform-origin: 720px 305.5px;*/
-    /*caret-color: rgb(33, 37, 41);*/
-    /*border: 0px none rgb(33, 37, 41);*/
-    /*outline: rgb(33, 37, 41) none 0px;*/
-    /*overflow: hidden auto;*/
-    /*padding: 160px 0px 0px;*/
-}
-.main2{
-    /*box-sizing: border-box;*/
-    /*color: rgb(33, 37, 41);*/
-    /*height: 451px;*/
-    /*overflow-wrap: break-word;*/
-    /*text-align: left;*/
-    /*text-decoration: none solid rgb(33, 37, 41);*/
-    /*text-rendering: optimizelegibility;*/
-    /*text-size-adjust: 100%;*/
-    /*width: 1080px;*/
-    /*word-break: break-all;*/
-    /*column-rule-color: rgb(33, 37, 41);*/
-    /*perspective-origin: 540px 225.5px;*/
-    /*transform-origin: 540px 225.5px;*/
-    /*caret-color: rgb(33, 37, 41);*/
-    /*border: 0px none rgb(33, 37, 41);*/
-    /*margin: 0px 180px;*/
-    /*outline: rgb(33, 37, 41) none 0px;*/
-}
-
-.main3{
-    box-sizing: border-box;
-    height: 120px;
-    letter-spacing: 1.2px;
-    overflow-wrap: break-word;
-    text-align: left;
-    text-rendering: optimizelegibility;
-    text-size-adjust: 100%;
-    width: 1080px;
-    word-break: break-all;
-    perspective-origin: 540px 60px;
-    transform-origin: 540px 60px;
-    animation: 1s ease 0s 1 normal none running none;
-    margin: 0px;
-}
-
-.main3br{
-    box-sizing: border-box;
-    display: block;
-    letter-spacing: 1.2px;
-    overflow-wrap: break-word;
-    text-align: left;
-    text-rendering: optimizelegibility;
-    text-size-adjust: 100%;
-    word-break: break-all;
-    perspective-origin: 0px 0px;
-    transform-origin: 0px 0px;
-}
-
-.mainp{
-    box-sizing: border-box;
-    color: rgb(51, 51, 51);
-    height: 128px;
-    letter-spacing: 1.2px;
-    overflow-wrap: break-word;
-    text-align: left;
-    text-decoration: none solid rgb(51, 51, 51);
-    text-rendering: optimizelegibility;
-    text-size-adjust: 100%;
-    width: 1080px;
-    word-break: break-all;
-    column-rule-color: rgb(51, 51, 51);
-    perspective-origin: 540px 64px;
-    transform-origin: 540px 64px;
-    caret-color: rgb(51, 51, 51);
-    animation: 1s ease 0s 1 normal none running none;
-    border: 0px none rgb(51, 51, 51);
-    margin: 24px 0px 0px;
-    outline: rgb(51, 51, 51) none 0px;
-}
-
-.require{
+    background-position: 0px 0px;
+    bottom: 0px;
     box-sizing: border-box;
     color: rgb(33, 37, 41);
-    display: flex;
-    height: 56px;
+    height: 611px;
+    left: 0px;
     overflow-wrap: break-word;
+    position: relative;
+    right: 0px;
     text-align: left;
     text-decoration: none solid rgb(33, 37, 41);
     text-rendering: optimizelegibility;
     text-size-adjust: 100%;
-    width: 1080px;
+    top: 0px;
     word-break: break-all;
     column-rule-color: rgb(33, 37, 41);
-    justify-content: flex-start;
-    perspective-origin: 540px 28px;
-    transform-origin: 540px 28px;
+    perspective-origin: 720px 305.5px;
+    transform-origin: 720px 305.5px;
     caret-color: rgb(33, 37, 41);
-    animation: 1s ease 0s 1 normal none running none;
     border: 0px none rgb(33, 37, 41);
-    font: normal normal 400 normal 16px / 24px source-han-sans-japanese, "Avenir Next", "Noto Sans Japanese", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ  Pro W3", Arial, メイリオ, Meiryo, "ＭＳ  Ｐゴシック", sans-serif;
-    margin: 48px 0px 0px;
     outline: rgb(33, 37, 41) none 0px;
+    padding: 160px 50px 0px;
 }
 
-.require1{
-    box-sizing: border-box;
-    color: #6f9cad8e;
-    cursor: pointer;
-    height: 56px;
-    letter-spacing: 0.8px;
-    min-height: auto;
-    min-width: auto;
-    overflow-wrap: break-word;
-    text-align: center;
-    text-decoration: none solid #6f9cad8e;
-    text-rendering: optimizelegibility;
-    text-size-adjust: 100%;
-    width: 220px;
-    word-break: break-all;
-    column-rule-color: #6f9cad8e;
-    perspective-origin: 110px 28px;
-    transform-origin: 110px 28px;
-    user-select: none;
-    caret-color: #6f9cad8e;
-    border: 1px solid #6f9cad8e;
-    border-radius: 28px 28px 28px 28px;
-    font: normal normal 700 normal 14px / 21px source-han-sans-japanese, "Avenir Next", "Noto Sans Japanese", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ  Pro W3", Arial, メイリオ, Meiryo, "ＭＳ  Ｐゴシック", sans-serif;
-   margin: 0px;
-    outline: #6f9cad8e none 0px;
-    padding: 18px 0px;
+.main2{
+    line-height: 150%;
 }
 
-.new{
+.require {
+    list-style: none;
+    /*overflow: hidden;*/
+}
+
+.require li {
+    width: 240px;
+    float: left;
+}
+
+.require li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login{
     box-shadow: #6f9cad8e 0px 0px 8px 0px;
     box-sizing: border-box;
     color: #6f9cad8e;
@@ -622,8 +562,36 @@ th {
     min-width: auto;
     overflow-wrap: break-word;
     text-align: center;
-    /*text-decoration: none solid rgb(255, 255, 255);*/
-    /*text-rendering: optimizelegibility;*/
+    text-decoration: none solid rgb(255, 255, 255);
+    text-rendering: optimizelegibility;
+    width: 220px;
+    word-break: break-all;
+    column-rule-color: #6f9cad8e;
+    text-size-adjust: 100%;
+    perspective-origin: 110px 28px;
+    transform-origin: 110px 28px;
+    user-select: none;
+    background: #fff none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none #6f9cad8e;
+    border-radius: 28px 28px 28px 28px;
+    margin: 0px 0px 0px 24px;
+    outline: #6f9cad8e none 0px;
+    padding: 18px 0px;
+}
+
+.register{
+    box-shadow: #6f9cad8e 0px 0px 8px 0px;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    height: 56px;
+    letter-spacing: 0.8px;
+    min-height: auto;
+    min-width: auto;
+    overflow-wrap: break-word;
+    text-align: center;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-rendering: optimizelegibility;
     width: 220px;
     word-break: break-all;
     column-rule-color: #6f9cad8e;
@@ -638,3 +606,100 @@ th {
     outline: #6f9cad8e none 0px;
     padding: 18px 0px;
 }
+
+.Content {
+    padding: 60px 0px;
+}
+.inline-block1,.inline-block2,.inline-block3,.inline-block4{
+    display: inline-block;
+    padding:  0px 40px 0px;
+}
+
+.list{
+    background-color: #6c757d;
+    padding: 10px;
+}
+.Calendar{
+    background-color: #e3e3e6;
+    padding: 10px;
+}
+
+.ChaCha{
+    background-color: #6c757d;
+    padding: 10px;
+}
+
+.analyze{
+    background-color: #e3e3e6;
+    padding: 10px;
+}
+
+.ContentBox {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 32px 0px;
+    text-align: center;
+    caret-color: rgb(33, 37, 41);
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(33, 37, 41);
+    border-radius: 12px 12px 12px 12px;
+    margin: 32px 0px 0px;
+    outline: rgb(33, 37, 41) none 0px;
+    padding: 40px 32px;
+}
+
+.ContentIndex {
+    box-sizing: border-box;
+    color: rgb(51, 51, 51);
+    display: inline-block;
+    letter-spacing: 0.8px;
+    text-align: center;
+    width: 50px;
+    caret-color: rgb(51, 51, 51);
+    background: rgb(236, 240, 244) ;
+    border: 0px none rgb(51, 51, 51);
+    border-radius: 16px 16px 16px 16px;
+    margin: 0px;
+    outline: rgb(51, 51, 51) none 0px;
+    padding: 6px 16px;
+}
+
+.font{
+    font-family: 'Poiret One', cursive;
+}
+
+.ContentP {
+    box-sizing: border-box;
+    color: rgb(51, 51, 51);
+    letter-spacing: 0.4px;
+    overflow-wrap: break-word;
+    text-align: center;
+    text-decoration: none solid rgb(51, 51, 51);
+    text-rendering: optimizelegibility;
+    text-size-adjust: 100%;
+    width: 320px;
+    word-break: break-all;
+    column-rule-color: rgb(51, 51, 51);
+    perspective-origin: 160px 50px;
+    transform-origin: 160px 50px;
+    caret-color: rgb(51, 51, 51);
+    border: 0px none rgb(51, 51, 51);
+    margin: 0px;
+    outline: rgb(51, 51, 51) none 0px;
+}
+
+.contentBR{
+    color: rgb(51, 51, 51);
+    letter-spacing: 0.4px;
+    overflow-wrap: break-word;
+    text-align: center;
+    text-decoration: none solid rgb(51, 51, 51);
+    text-rendering: optimizelegibility;
+    text-size-adjust: 100%;
+    word-break: break-all;
+    column-rule-color: rgb(51, 51, 51);
+    perspective-origin: 0px 0px;
+    transform-origin: 0px 0px;
+    caret-color: rgb(51, 51, 51);
+    border: 0px none rgb(51, 51, 51);
+   outline: rgb(51, 51, 51) none 0px;
+}
+

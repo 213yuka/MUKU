@@ -33,8 +33,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/calendar', 'CalendarController@index')->name('calendar.index');
     Route::get('/calendar/create', 'CalendarController@showCreateForm')->name('calendar.create');
     Route::post('/calendar/create', 'CalendarController@create');
-//    Route::get('/calendar/edit', 'CalendarController@showEditForm')->name('calendar.edit');
-//    Route::post('/calendar/edit', 'CalendarController@edit');
+    Route::get('/calendar/{evaluation}/edit', 'CalendarController@showEditForm')->name('calendar.edit');
+    Route::post('/calendar/{evaluation}/edit', 'CalendarController@edit');
 
     // Analyze
         // Analyzeコントローラー
@@ -43,25 +43,24 @@ Route::group(['middleware' => 'auth'], function() {
     // ChaCha
     Route::get('/ChaCha', 'ChaChaController@index')->name('ChaCha.index');
 
-    // Contact
-    Route::get('/contact/index', 'ContactController@index')->name('contact.index');
-    Route::get('/contact/about/motivation', 'ContactController@showMotivation')->name('contact.motivation');
-
-    //Other information
-    Route::get('/contact/about/developer', 'ContactController@showDeveloper')->name('contact.developer');
-    Route::get('/contact/support/question', 'ContactController@showQuestion')->name('contact.question');
-    Route::get('/contact/support/contact', 'ContactController@showContact')->name('contact.contact');
-
 });
+
+Route::get('/welcome', 'HomeController@welcome')->name('welcome');
+
+// Contact
+Route::get('/contact/index', 'ContactController@index')->name('contact.index');
+Route::get('/contact/about/motivation', 'ContactController@showMotivation')->name('contact.motivation');
+Route::get('/contact/about/developer', 'ContactController@showDeveloper')->name('contact.developer');
+Route::get('/contact/support/question', 'ContactController@showQuestion')->name('contact.question');
+Route::get('/contact/support/contact', 'ContactController@showContact')->name('contact.contact');
 
 Auth::routes();
 
 
 // 現在の問題点
-//・make.blade.phpの時、ヘッダーが変になる
+//・カレンダーレスポンシブ問題
 
 //カレンダーつけたい機能
-//・点数編集機能
 //・点数共有機能
 
 
@@ -87,7 +86,6 @@ Auth::routes();
 // ・ToDOList
 // https://www.hypertextcandy.com/laravel-tutorial-todo-app-list-folders
 
-//やってみたいチュートリアル
 
 //一通りの流れ
 //ルーティング

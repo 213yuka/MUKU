@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Evaluation;
 use App\Http\Requests\CreateEvaluation;
+use App\Http\Requests\EditEvaluation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -16,7 +17,6 @@ class CalendarController extends Controller
     {
         // ユーザーのカレンダーを取得する
          $calendars = Auth::user()->calendars()->get();
-        \Debugbar::addMessage($calendars);
 
         return view('calendar/index',[
             'calendars' => $calendars,
@@ -43,6 +43,27 @@ class CalendarController extends Controller
 
         return redirect()->route('calendar.index', [
             'id' => $calendar->id,
+        ]);
+    }
+
+    // [get]カレンダー編集フォーム
+    public function showEditForm(Evaluation $evaluation)
+    {
+
+        return view('calendar/edit', [
+            'calendar' => $evaluation,
+        ]);
+    }
+
+//     [post]カレンダー編集フォームからカレンダー一覧表示へリダイレクト
+    public function edit(Evaluation $evaluation, EditEvaluation $request)
+    {
+
+        $evaluation->evaluation = $request->evaluation;
+        $evaluation->save();
+
+        return redirect()->route('calendar.index', [
+            'id' => $evaluation->id,
         ]);
     }
 }
