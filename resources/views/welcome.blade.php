@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MUKU</title>
-    <link rel="stylesheet" href="/css/style.css" media="all">
+    <link rel="stylesheet" href="/css/muku.css" media="all">
     <link rel="icon" type="image/png" href="/images/m.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -60,7 +60,7 @@
 
         <section class="Content">
                 <p class="center">
-                    以下のう4つの機能を駆使して自分のことを見つめ直すことができます。
+                    以下の2つの機能を駆使して良い習慣を身につけましょう。
                 </p>
             <div class = "list">
                 <div class="inline-block1">
@@ -74,6 +74,7 @@
                         <p class="ContentP">
                            自分のするべきことを整理できていますか？<br class="contentBR" />MUKUのLISTはテスト、レポートなどのように分類してタスクを管理できます。<br id="contentBR" />タスクを優先順位順、期限順に並び替えることができます。
                         </p>
+                        <a href="{{ route('list') }}" type="button" class="btn">LISTページへ</a>
                     </div>
                 </div>
             <div class="inline-block1">
@@ -91,8 +92,9 @@
                             Calendar
                         </h3>
                         <p class="ContentP">
-                            今日の自分点数をつけるとしたら何点ですか？<br class="contentBR" />充実した日々を送るために1日の自分の生活に毎日点数をつけて、自分を客観視してみませんか？
+                        今日の自分点数をつけるとしたら何点ですか？<br class="contentBR" />充実した日々を送るために1日の自分の生活に毎日点数をつけて、自分を客観視してみませんか？
                         </p>
+                        <a href="{{ route('calendar.index') }}" type="button" class="btn">Calendarページへ</a>
                     </div>
             </div>
                 <div class="inline-block2">
@@ -100,48 +102,48 @@
                 </div>
             </div>
 
-            <div class = "ChaCha">
-            <div class="inline-block3">
-                    <div class="ContentBox">
-                        <p class="ContentIndex">
-                            3
-                        </p>
-                        <h3 class="font">
-                            ChaCha
-                        </h3>
-                        <p class="ContentP">
-                            InstagrmやTwitterで勉強用にアカウントを作成しても、面白いゴシップなどがタイムラインに流れてきてつい見てしまうことはありませんか？
-                            <br class ="contentBR">ChaChaは勉強に特化した報告型SNSです。
-                        </p>
-                    </div>
-            </div>
-                        <div class="inline-block3">
-                            <p class="ContentP">
-                           -- 近日公開 --
-                            </p>
-                        </div>
-            </div>
+{{--            <div class = "ChaCha">--}}
+{{--            <div class="inline-block3">--}}
+{{--                    <div class="ContentBox">--}}
+{{--                        <p class="ContentIndex">--}}
+{{--                            3--}}
+{{--                        </p>--}}
+{{--                        <h3 class="font">--}}
+{{--                            ChaCha--}}
+{{--                        </h3>--}}
+{{--                        <p class="ContentP">--}}
+{{--                            InstagrmやTwitterで勉強用にアカウントを作成しても、面白いゴシップなどがタイムラインに流れてきてつい見てしまうことはありませんか？--}}
+{{--                            <br class ="contentBR">ChaChaは勉強に特化した報告型SNSです。--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--            </div>--}}
+{{--                        <div class="inline-block3">--}}
+{{--                            <p class="ContentP">--}}
+{{--                           -- 近日公開 ----}}
+{{--                            </p>--}}
+{{--                        </div>--}}
+{{--            </div>--}}
 
-            <div class = "analyze">
-            <div class="inline-block4">
-                    <div class="ContentBox">
-                        <p class="ContentIndex">
-                            4
-                        </p>
-                        <h3 class="font">
-                            Analyze
-                        </h3>
-                        <p class="ContentP">
-                            自分に迷走することはありませんか？<br class ="contentBR">自分はどんな性格でどんなことに向いているのか。そういった悩みを解決するために自分を分析してみませんか？
-                        </p>
-                    </div>
-            </div>
-                <div class="inline-block4">
-                    <p class="ContentP">
-                    -- 近日公開 --
-                    </p>
-                </div>
-            </div>
+{{--            <div class = "analyze">--}}
+{{--            <div class="inline-block4">--}}
+{{--                    <div class="ContentBox">--}}
+{{--                        <p class="ContentIndex">--}}
+{{--                            4--}}
+{{--                        </p>--}}
+{{--                        <h3 class="font">--}}
+{{--                            Analyze--}}
+{{--                        </h3>--}}
+{{--                        <p class="ContentP">--}}
+{{--                            自分に迷走することはありませんか？<br class ="contentBR">自分はどんな性格でどんなことに向いているのか。そういった悩みを解決するために自分を分析してみませんか？--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--            </div>--}}
+{{--                <div class="inline-block4">--}}
+{{--                    <p class="ContentP">--}}
+{{--                    -- 近日公開 ----}}
+{{--                    </p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </section>
 
         <footer class = "footer">

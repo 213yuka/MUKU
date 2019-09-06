@@ -18,8 +18,6 @@
          <div class="animated jello">Calender</div>
         </span></a></li>
         <li><a href= "{{ route('list') }}"><div>List</div></a></li>
-        <li><a href="{{ route('analyze.index') }}"><div>Analyze</div></a></li>
-        <li><a href="{{ route('ChaCha.index') }}"><div>ChaCha</div></a></li>
         <li><a href="{{ route('contact.index') }}"><div>Contact</div></a></li>
 		</ul>
         </nav>

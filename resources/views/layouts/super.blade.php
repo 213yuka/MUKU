@@ -6,11 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MUKU</title>
   @yield('styles')
-  <link rel="stylesheet" href="/css/style.css" media="all">
+  <link rel="stylesheet" href="/css/muku.css" media="all">
   <link rel="icon" type="image/png" href="/images/m.png">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href='packages/core/main.css' rel='stylesheet' />
@@ -18,8 +16,6 @@
   <script src='packages/core/main.js'></script>
   <script src='packages/interaction/main.js'></script>
   <script src='packages/daygrid/main.js'></script>
-  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
 <div class = "wrapper">
@@ -29,7 +25,7 @@
         <a class="my-navbar-item" href="{{ route('login') }}">ログイン</a>
         ｜
         <a class="my-navbar-item" href="{{ route('register') }}">会員登録</a>
-      @endif
+        @endif
       </header>
      @yield('content')
   <footer class = "footer">

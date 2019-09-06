@@ -1,7 +1,7 @@
 <?php
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/list', 'HomeController@listLink')->name('list');
     Route::get('/list/table', 'HomeController@listTable')->name('list.table');
 
@@ -45,7 +45,7 @@ Route::group(['middleware' => 'auth'], function() {
 
 });
 
-Route::get('/welcome', 'HomeController@welcome')->name('welcome');
+Route::get('/', 'HomeController@welcome')->name('welcome');
 
 // Contact
 Route::get('/contact/index', 'ContactController@index')->name('contact.index');
@@ -86,11 +86,3 @@ Auth::routes();
 // ・ToDOList
 // https://www.hypertextcandy.com/laravel-tutorial-todo-app-list-folders
 
-
-//一通りの流れ
-//ルーティング
-//コントローラークラス
-//マイグレーション
-//シーダー
-//モデル
-//テンプレート

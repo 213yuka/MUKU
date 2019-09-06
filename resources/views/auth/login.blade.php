@@ -29,9 +29,9 @@
               </div>
             </form>
           </div>
-           <div class="panel-body">
-          <a href="{{ route('password.request') }}">パスワードの変更はこちらから</a>
-        </div>
+{{--           <div class="panel-body">--}}
+{{--          <a href="{{ route('password.request') }}">パスワードの変更はこちらから</a>--}}
+{{--        </div>--}}
         </nav>
       </div>
     </div>

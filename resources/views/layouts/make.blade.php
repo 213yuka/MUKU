@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MUKU</title>
   @yield('styles')
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/muku.css">
   <link rel="icon" type="image/png" href="/images/m.png">
     <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
